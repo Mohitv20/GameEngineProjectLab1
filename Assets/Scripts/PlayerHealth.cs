@@ -11,11 +11,12 @@ public class PlayerHealth : MonoBehaviour
     {
         pHealth -= a;
 
-        if (pHealth <= 0.0f) 
+        if (pHealth <= 0.0f)
         {
-            Destroy(gameObject);  
+            Destroy(gameObject);
         }
     }
+ 
 
     // Update is called once per frame
     void Update()

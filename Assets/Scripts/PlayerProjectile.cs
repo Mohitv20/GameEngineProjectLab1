@@ -2,8 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerProjectile : MonoBehaviour
+
 {
+    public MeshRenderer Bee;
+    public MeshRenderer Shiny;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,7 +18,7 @@ public class PlayerProjectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     private void OnCollisionEnter(Collision other)
@@ -22,7 +27,10 @@ public class PlayerProjectile : MonoBehaviour
         {
             {
                 other.collider.GetComponent<EnemyBehavior>().beeH.DealDamage(20);
+                //Object.GetComponent<MeshRenderer>().material = Shiny;
             }
         }
     }
+
+
 }
